@@ -1,0 +1,47 @@
+/* --- Estilos para Validação JS --- */
+
+/* Estilo para a mensagem de erro */
+.erro-mensagem {
+    color: #e74c3c; /* Vermelho */
+    font-size: 0.8em;
+    height: 1.2em; /* Garante que a altura não mude ao aparecer/desaparecer */
+    display: block;
+    margin-top: 5px;
+}
+
+/* Feedback para o estado de erro */
+.form-group.error input {
+    border-color: #e74c3c; /* Borda vermelha no input */
+    box-shadow: 0 0 0 0.1rem rgba(231, 76, 60, 0.25);
+}
+
+/* Feedback para o estado de sucesso */
+.form-group.success input {
+    border-color: #2ecc71; /* Borda verde no input */
+    box-shadow: 0 0 0 0.1rem rgba(46, 204, 113, 0.25);
+}
+
+/* Estilo para a mensagem de sucesso geral do formulário */
+#sucesso-mensagem {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none !important;
+}
+
+/* (Opcional) Estilo base para o input (se não houver) */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding não afeta a largura */
+}
