@@ -1,47 +1,120 @@
-/* --- Estilos para Validação JS --- */
+/* ======================================= */
+/* 1. Estilos Base e Layout Geral          */
+/* ======================================= */
 
-/* Estilo para a mensagem de erro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* ======================================= */
+/* 2. Estilos do Formulário e Campos       */
+/* ======================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Verde para o botão principal */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* ======================================= */
+/* 3. Feedback de Validação JavaScript     */
+/* ======================================= */
+
+/* Estilo para a mensagem de erro (texto abaixo do input) */
 .erro-mensagem {
-    color: #e74c3c; /* Vermelho */
-    font-size: 0.8em;
-    height: 1.2em; /* Garante que a altura não mude ao aparecer/desaparecer */
+    color: #dc3545; /* Vermelho forte para erro */
+    font-size: 0.85em;
+    height: 1.2em; /* Reserva espaço para evitar quebra de layout ao aparecer */
     display: block;
     margin-top: 5px;
 }
 
-/* Feedback para o estado de erro */
+/* Estado de ERRO: Aplica estilo à borda do input */
 .form-group.error input {
-    border-color: #e74c3c; /* Borda vermelha no input */
-    box-shadow: 0 0 0 0.1rem rgba(231, 76, 60, 0.25);
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.25); /* Sombra de foco vermelha */
 }
 
-/* Feedback para o estado de sucesso */
+/* Estado de SUCESSO: Aplica estilo à borda do input */
 .form-group.success input {
-    border-color: #2ecc71; /* Borda verde no input */
-    box-shadow: 0 0 0 0.1rem rgba(46, 204, 113, 0.25);
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.1rem rgba(40, 167, 69, 0.25); /* Sombra de foco verde */
 }
 
-/* Estilo para a mensagem de sucesso geral do formulário */
+/* Mensagem de sucesso geral (após o envio bem-sucedido) */
 #sucesso-mensagem {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
+    background-color: #d4edda; /* Fundo verde claro */
+    color: #155724; /* Texto verde escuro */
+    border: 1px solid #c3e6cb;
+    padding: 15px;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
+    font-weight: bold;
 }
 
-/* Classe para esconder elementos */
+/* Classe utilitária para esconder elementos via JS */
 .hidden {
     display: none !important;
-}
-
-/* (Opcional) Estilo base para o input (se não houver) */
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Garante que padding não afeta a largura */
 }
